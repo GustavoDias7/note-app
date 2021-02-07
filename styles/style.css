@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri;
+    color: #fff;
+}
+
+body {
+    padding-bottom: 5rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff7b00;
+    padding: 0 1rem;
+    height: 3rem;
+}
+
+button {
+    width: 3.5rem;
+    height: 1.2rem;
+    margin: .2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+    background-color: #ffb84e;
+}
+
+button:hover {
+    background-color: #ffa51e;
+}
+
+#new-note {
+    width: 7rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 2rem;
+}
+
+#new-note:before {
+    content: 'New Note';
+}
+
+#main-container {
+    max-width: 72rem;
+    margin: auto;
+}
+
+.note {
+    display: inline-block;
+    width: 17rem;
+    height: 17rem;
+    margin: .5rem;
+    background-color: #ffb773;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 2.5rem;
+    padding: 0 .5rem;
+    background-color: #ff7b00;
+}
+
+.edit,
+.save {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.editedColorNote {
+    background-color: #f1c499;
+}
+
+.note-text-container {
+    padding: .5rem;
+    height: 14.5rem;
+}
+
+.note-text {
+    width: 256px;
+    height: 216px;
+    color: #000;
+    resize: none;
+    border: none;
+    background-color: unset;
+}
+
+.note-text:read-only {
+    color: #2c2c2c;
+    cursor: default;
+}
+
+.note-text:focus {
+    outline: none;
+}
+
+.note-text::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.note-text::-webkit-scrollbar-track {
+    background-color: #ff7b0044;
+    border-radius: 1rem;
+}
+
+.note-text::-webkit-scrollbar-thumb {
+    background-color: #ff7b00;
+    border-radius: 1rem;
+}
+
+@media (max-width: 1151px) {
+    #main-container {
+        max-width: 54rem;
+    }
+}
+@media (max-width: 863px) {
+    #main-container {
+        max-width: 36rem;
+    }
+}
+@media (max-width: 575px) {
+    #main-container {
+        max-width: 18rem;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    #new-note {
+        position: fixed;
+        bottom: .4rem;
+        right: .4rem;
+        width: 4rem;
+        height: 4rem;
+        font-size: 3rem;
+        font-weight: bold;
+        border-radius: 50%;
+        background-color: #ffa51e;
+    }
+
+    #new-note:before {
+        display: none;
+    }
+
+    #new-note:after {
+        content: '+';
+    }
+}
